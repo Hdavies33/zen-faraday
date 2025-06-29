@@ -1,0 +1,280 @@
+/* ─────────────────────────────────────────────────────────── */
+/* 0. RESET & BASE                                            */
+/* ─────────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* 1. PAGE WRAPPER                                            */
+/* ─────────────────────────────────────────────────────────── */
+.page-wrapper {
+  max-width: 2551px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* 2. HEADER & NAV                                            */
+/* ─────────────────────────────────────────────────────────── */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo {
+  width: 50px;
+  height: auto;
+}
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+nav {
+  width: 100%;
+  background: #000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem 0;
+}
+nav li {
+  margin: 0 2rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* 3. HERO SLIDE                                              */
+/* ─────────────────────────────────────────────────────────── */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #fff !important;
+  overflow: visible;
+}
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.hero .subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* 4. AWARDS GRID                                            */
+/* ─────────────────────────────────────────────────────────── */
+.awards {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.card {
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 1.5rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.stats {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.stats li {
+  font-weight: bold;
+}
+.desc {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* 5. RECAPS                                                  */
+/* ─────────────────────────────────────────────────────────── */
+.recaps {
+  padding: 2rem 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.recap-card {
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 1.5rem;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.recap-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 1rem;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.recap-date {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* 6. SOCIALS BUTTON                                          */
+/* ─────────────────────────────────────────────────────────── */
+.socials-btn {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.btn {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* 7. RESPONSIVE BREAKPOINTS                                  */
+/* ─────────────────────────────────────────────────────────── */
+@media (max-width: 1023px) {
+  .cards,
+  .recaps {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .cards .card,
+  .recaps .recap-card {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
+/* ───────────────────────────────────────────────────────── */
+/*  RESET TO FIXED DESKTOP WIDTH & NATURAL HERO SIZE       */
+/* ───────────────────────────────────────────────────────── */
+/* 1. Constrain page width to your Desktop frame (1440px)  */
+.page-wrapper {
+  max-width: 1440px !important; /* your Figma desktop frame width */
+  margin: 0 auto !important;
+  padding: 0 1rem !important; /* side padding on smaller viewports */
+}
+
+/* 2. Hero image flows to container width, keeps aspect ratio */
+.hero img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important; /* show the full squad */
+  max-height: none !important; /* remove any height cap */
+}
+/* ───────────────────────────────────────────── */
+/*  UNIFORM BOXES FOR AWARDS & EVENT VIDEOS     */
+/* ───────────────────────────────────────────── */
+.cards,
+.recaps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* shared box styling */
+.card,
+.recap-card {
+  flex: 0 1 300px; /* each box is 300px wide, wraps on smaller screens */
+  background-color: #fff; /* pure white */
+  border-radius: 8px; /* rounded corners */
+  padding: 1.5rem; /* inner padding */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* images inside award cards */
+.card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* wrap the video in the same box style */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect */
+  height: 0;
+  margin-bottom: 1rem;
+  border-radius: 4px; /* rounded corners on the iframe container */
+  overflow: hidden;
+}
+
+/* size the iframe to fill its box */
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
